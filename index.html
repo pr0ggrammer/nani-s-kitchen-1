@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nani's Kitchen - Home Cooked Love</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <script src="app.js"></script>
+    <!-- Floating Spice Particles -->
+    <div class="spice-particles" id="spiceParticles"></div>
+
+    <!-- Element 1: Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h1>Nani's Kitchen</h1>
+            <div class="loader-pot">
+                <div class="steam"></div>
+                <div class="steam"></div>
+                <div class="steam"></div>
+            </div>
+            <p>"Where every meal is made with love"</p>
+        </div>
+    </div>
+
+    <!-- Element 4: Navbar -->
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <a href="#home" onclick="navigateTo('home')">Home</a>
+            <a href="#testimonials" onclick="navigateTo('testimonials')">Testimonials</a>
+            <a href="#team" onclick="navigateTo('team')">Our Team</a>
+            <a href="#about" onclick="navigateTo('about')">About Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Element 9: Scroll-based Text -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title" id="heroTitle">Nani's Kitchen</h1>
+            <p class="hero-quote">"In every grain of rice, in every pinch of spice, lives the story of generations. Food is not just nourishment, it's the language of love that transcends time."</p>
+            <p class="hero-author">- Inspired by every grandmother's wisdom</p>
+        </div>
+    </section>
+
+    <!-- Element 6: Infinite Marquee -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <span class="marquee-item">AUTHENTIC RECIPES</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">TRADITIONAL FLAVORS</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">MADE WITH LOVE</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">HOME-STYLE COOKING</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">FRESH INGREDIENTS</span>
+            <span class="marquee-item">•</span>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Experience Nani's Love</h2>
+            <p>Ready to taste the authentic flavors that have been passed down through generations? Let us bring the warmth of an Indian grandmother's kitchen to your table.</p>
+            <a href="#" class="cta-button">Order Now</a>
+        </div>
+    </section>
+
+    <!-- Elements 2, 3 & 8: Reviews Section with Grid, Hover, and Ripple -->
+    <section class="reviews-section" id="testimonials">
+        <h2 class="section-title">What Our Family Says</h2>
+        <div class="reviews-grid" id="reviewsGrid">
+            <div class="review-card">
+                <p class="review-text">"The biryani tastes exactly like my grandmother used to make. Every bite brings back childhood memories. The love and care in every dish is unmistakable."</p>
+                <div class="review-author">
+                    <div class="review-avatar">P</div>
+                    <div class="review-info">
+                        <h4>Priya Sharma</h4>
+                        <span>Mumbai</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="review-card">
+                <p class="review-text">"I moved abroad 10 years ago and have been searching for authentic Indian flavors. Nani's Kitchen brings me closer to home with every meal."</p>
+                <div class="review-author">
+                    <div class="review-avatar">R</div>
+                    <div class="review-info">
+                        <h4>Rajesh Patel</h4>
+                        <span>Delhi</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="review-card">
+                <p class="review-text">"The dal tastes just like my mother's recipe. It's comfort food that touches your soul. You can taste the tradition in every spoonful."</p>
+                <div class="review-author">
+                    <div class="review-avatar">S</div>
+                    <div class="review-info">
+                        <h4>Sunita Reddy</h4>
+                        <span>Bangalore</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="review-card">
+                <p class="review-text">"Finally found a place that understands the true meaning of 'ghar ka khana'. The spices, the warmth, everything is perfect!"</p>
+                <div class="review-author">
+                    <div class="review-avatar">A</div>
+                    <div class="review-info">
+                        <h4>Anita Das</h4>
+                        <span>Kolkata</span>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Element 7: Team Section -->
+    <section class="team-section" id="team">
+        <h2 class="section-title">Meet Our Family</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img class="team-photo" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face" alt="Meera Devi">
+                <h3>Meera Devi</h3>
+                <p class="role">Head Chef & Founder</p>
+                <p>With 40 years of cooking experience, Meera Devi learned her recipes from her mother-in-law and has been perfecting them ever since. She believes every dish should be prepared with the same love you'd cook for your own family.</p>
+            </div>
+           
+            <div class="team-member">
+                <img class="team-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Arjun Kumar">
+                <h3>Arjun Kumar</h3>
+                <p class="role">Operations & Co-Founder</p>
+                <p>Arjun ensures that Nani's traditional recipes reach every home with the same freshness and love. He handles the operations while preserving the authentic taste that makes our kitchen special.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div class="footer-content">
+            <h3>Connect With Nani's Kitchen</h3>
+            <div class="footer-links">
+                <a href="#contact">Contact Us</a>
+                <a href="#about">About Us</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#locations">Locations</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p>© 2024 Nani's Kitchen. Made with love, served with tradition.</p>
+            <p>📞 +91 98765 43210 | 📧 hello@naniskitchen.com</p>
+        </div>
+    </footer>
+</body>
+</html>
