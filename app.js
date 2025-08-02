@@ -5,14 +5,6 @@
             }, 3000);
         });
 
-        // Element 4: Hamburger Menu
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
 
         // Navigation with smooth scrolling
         function navigateTo(section) {
@@ -99,7 +91,7 @@
 
         // Element 3: Custom Cursor for Reviews Grid
         const reviewsGrid = document.getElementById('reviewsGrid');
-        let customCursor = null;
+        
 
         function createCustomCursor() {
             customCursor = document.createElement('div');
@@ -119,15 +111,17 @@
         }
 
         createCustomCursor();
+        if(reviewsGrid){
+                   reviewsGrid.addEventListener('mouseenter', () => {
+    customCursor.style.display = 'block';
+    reviewsGrid.style.cursor = 'none';
+});
+        }
+ 
 
-        reviewsGrid.addEventListener('mouseenter', () => {
-            customCursor.style.display = 'block';
-            document.body.style.cursor = 'none';
-        });
-
-        reviewsGrid.addEventListener('mouseleave', () => {
-            customCursor.style.display = 'none';
-            document.body.style.cursor = 'default';
+reviewsGrid.addEventListener('mouseleave', () => {
+    customCursor.style.display = 'none';
+    reviewsGrid.style.cursor = 'default';
         });
 
         reviewsGrid.addEventListener('mousemove', (e) => {
@@ -258,8 +252,32 @@
                 }, 300);
             }, 1000);
         }
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
-        // Smooth scroll behavior for all internal links
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+      observer.observe(el);
+    });
+  });
+
+
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    grid: { rows: 2 },
+    spaceBetween: 10,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+  });
+  
+  
+  
+  // Smooth scroll behavior for all internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -273,3 +291,46 @@
             });
         });
   
+
+// Custom Cursor for #reviewsGrid
+const customCursor = document.getElementById('customCursor');
+
+document.addEventListener('mousemove', (e) => {
+  if (!customCursor) return;
+  customCursor.style.display = 'block';
+  customCursor.style.top = `${e.clientY}px`;
+  customCursor.style.left = `${e.clientX}px`;
+});
+
+document.addEventListener('mouseleave', () => {
+  if (customCursor) customCursor.style.display = 'none';
+});
+
+if (reviewsGrid) {
+  reviewsGrid.addEventListener('mouseenter', () => {
+    customCursor.style.display = 'block';
+    reviewsGrid.style.cursor = 'none';
+  });
+
+  reviewsGrid.addEventListener('mouseleave', () => {
+    customCursor.style.display = 'none';
+    reviewsGrid.style.cursor = 'default';
+  });
+
+  reviewsGrid.addEventListener('mousemove', (e) => {
+    customCursor.style.top = `${e.clientY}px`;
+    customCursor.style.left = `${e.clientX}px`;
+  });
+
+  reviewsGrid.querySelectorAll('.review-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      customCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+      customCursor.style.background = '#ffa500'; // warm-orange
+    });
+
+    card.addEventListener('mouseleave', () => {
+      customCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+      customCursor.style.background = '#ffd700'; // back to golden
+    });
+  });
+}

@@ -1,0 +1,199 @@
+/* body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader-wrapper {
+  text-align: center;
+  animation: fadeOut 1s ease forwards;
+  animation-delay: 5s; /* Optional auto-hide 
+}
+
+.loader {
+  animation: popIn 1s ease;
+}
+
+.loading-title {
+  font-size: 2.2rem;
+  color: #4d2c1d;
+  margin-bottom: 10px;
+}
+
+.countdown {
+  font-size: 4rem;
+  color: #8b4513;
+  font-weight: bold;
+  animation: pulse 0.3s infinite alternate;
+}
+
+.loading-sub {
+  font-size: 1rem;
+  color: #5e3210;
+  margin-top: 12px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+} */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fdbb84, #f3904f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fullscreen Loader */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #fca878, #f9b36b);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+/* Text content in center */
+.loader-content {
+  text-align: center;
+  z-index: 2; /* Make sure it appears ABOVE the scooter */
+  color: #4e2500;
+}
+
+.loader-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.loader-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* Scooter container spans full screen */
+.scooter-wrapper {
+  position: absolute;
+  top: 70%; /* Position the scooter below the text */
+  left: 0;
+  width: 100vw;
+  height: 200px;
+  overflow: visible;
+  z-index: 1; /* Behind text */
+}
+
+/* Scooter Image */
+.scooter {
+  height: 200px; /* Adjust as needed */
+  position: absolute;
+  left: -300px;
+  animation: moveScooter 6s linear infinite;
+}
+
+@keyframes moveScooter {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+/* 
+.scooter-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100vw; /* full width 
+  height: 150px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.scooter {
+  height: 180px;
+  position: absolute;
+  left: -300px;
+  animation: moveScooter 5s linear infinite;
+   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 1;
+}
+
+@keyframes moveScooter {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 100vw;
+  }
+} */
+
+/* .scooter-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.scooter {
+  height: 120px;
+  position: absolute;
+  left: -200px;
+  animation: moveScooter 3s linear infinite;
+}
+
+@keyframes moveScooter {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 110%;
+  }
+} */
+
+h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+#counter {
+  font-size: 4rem;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .scooter {
+    height: 80px;
+  }
+}

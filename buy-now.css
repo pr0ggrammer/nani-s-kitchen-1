@@ -1,0 +1,481 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0, #fdcb6e);
+  min-height: 100vh;
+  color: #2d3436;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #2d3436;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #636e72;
+  font-weight: bold;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Checkout Container */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+/* Bill Section */
+.bill-section {
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.bill-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(253, 203, 110, 0.3);
+}
+
+.bill-card h2 {
+  color: #e17055;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.selected-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: rgba(253, 203, 110, 0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(253, 203, 110, 0.3);
+}
+
+.selected-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fdcb6e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-details h3 {
+  color: #2d3436;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.item-details p {
+  color: #636e72;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bill-breakdown {
+  border-top: 2px solid rgba(253, 203, 110, 0.3);
+  padding-top: 20px;
+}
+
+.bill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+.bill-row.subtotal {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding-top: 15px;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.bill-row.tax {
+  color: #636e72;
+  font-size: 0.9rem;
+}
+
+.bill-row.total {
+  border-top: 2px solid #fdcb6e;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e17055;
+}
+
+.savings-badge {
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+/* Form Section */
+.form-card {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(225, 112, 85, 0.3);
+}
+
+.form-card h2 {
+  color: #fdcb6e;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2d3436;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid rgba(253, 203, 110, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #fdcb6e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(253, 203, 110, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Delivery Options */
+.delivery-options {
+  margin: 25px 0;
+  padding: 20px;
+  background: rgba(116, 185, 255, 0.1);
+  border-radius: 15px;
+  border: 2px solid rgba(116, 185, 255, 0.3);
+}
+
+.delivery-options h3 {
+  color: #2d3436;
+  margin-bottom: 15px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.radio-option:hover {
+  background: rgba(116, 185, 255, 0.1);
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #74b9ff;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom {
+  background: #74b9ff;
+  border-color: #74b9ff;
+}
+
+.radio-option input[type="radio"]:checked + .radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Pay Now Button */
+.pay-now-btn {
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #e17055, #fdcb6e);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(225, 112, 85, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pay-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(225, 112, 85, 0.4);
+  background: linear-gradient(135deg, #d63031, #e17055);
+}
+
+.pay-now-btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+}
+
+/* Back Link */
+.back-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-link a {
+  color: #74b9ff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: rgba(116, 185, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-link a:hover {
+  background: rgba(116, 185, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .bill-section {
+    position: static;
+    order: 2;
+  }
+
+  .form-section {
+    order: 1;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .bill-card,
+  .form-card {
+    padding: 20px;
+  }
+
+  .selected-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .radio-group {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .bill-card,
+  .form-card {
+    padding: 15px;
+  }
+
+  .pay-now-btn {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+}
+/* Floating Dish Overlay */
+.floating-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.floating-overlay.hidden {
+  display: none;
+}
+
+.floating-content {
+  background: #fffefb;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  animation: popIn 0.3s ease-out;
+}
+
+.floating-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  max-height: 250px;
+}
+
+.floating-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.floating-content p {
+  color: #636e72;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.floating-content .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e17055;
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #636e72;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #d63031;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

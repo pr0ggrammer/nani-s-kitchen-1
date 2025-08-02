@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nani's Kitchen - Home Cooked Love</title>
     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     </head>
 <body>
     <script src="app.js"></script>
@@ -24,20 +25,7 @@
         </div>
     </div>
 
-    <!-- Element 4: Navbar -->
-    <nav class="navbar">
-        <div class="hamburger" id="hamburger">
-           <div class="bar"></div>
-           <div class="bar"></div>
-           <div class="bar"></div>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <a href="#home" onclick="navigateTo('home')">Home</a>
-            <a href="#testimonials" onclick="navigateTo('testimonials')">Testimonials</a>
-            <a href="#team" onclick="navigateTo('team')">Our Team</a>
-            <a href="#about" onclick="navigateTo('about')">About Us</a>
-        </div>
-    </nav>
+
 
     <!-- Hero Section with Element 9: Scroll-based Text -->
     <section class="hero" id="home">
@@ -69,7 +57,7 @@
         <div class="cta-content">
             <h2>Experience Nani's Love</h2>
             <p>Ready to taste the authentic flavors that have been passed down through generations? Let us bring the warmth of an Indian grandmother's kitchen to your table.</p>
-            <a href="#" class="cta-button">Order Now</a>
+            <a href="index1.html" class="cta-button">Order Now</a>
         </div>
     </section>
 
@@ -132,20 +120,23 @@
         <h2 class="section-title">Meet Our Family</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img class="team-photo" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face" alt="Meera Devi">
-                <h3>Meera Devi</h3>
-                <p class="role">Head Chef & Founder</p>
-                <p>With 40 years of cooking experience, Meera Devi learned her recipes from her mother-in-law and has been perfecting them ever since. She believes every dish should be prepared with the same love you'd cook for your own family.</p>
+                <img class="team-photo" src="images\IMG-20250202-WA0018.jpg" alt="Abishta Veludandi">
+                <h3>Abishta Veludandi</h3>
+                <p class="role">Founder and CEO</p>
+                <p>A Second year student at Thakur College of Engineering and Technology who loves cooking and believes that good food is the key to anyone's heart and soul. Her dedication truly shines through the effort she puts in the things she does!</p>
             </div>
            
             <div class="team-member">
-                <img class="team-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Arjun Kumar">
-                <h3>Arjun Kumar</h3>
-                <p class="role">Operations & Co-Founder</p>
-                <p>Arjun ensures that Nani's traditional recipes reach every home with the same freshness and love. He handles the operations while preserving the authentic taste that makes our kitchen special.</p>
+                <img class="team-photo" src="images/myphoto.JPG" alt="Tanvi Jabare">
+                <h3>Tanvi Jabare</h3>
+                <p class="role">Co-Founder and CTO</p>
+                <p>A second year student at Thakur College of Engineering and Technology who is an avid solver and a technology freak. Just give her a problem and she will come up with an idea in literal seconds.</p>
             </div>
         </div>
     </section>
+
+  <!-- Add more cards as needed -->
+</section>
 
     <!-- Footer -->
     <footer class="footer" id="about">
@@ -162,5 +153,6 @@
             <p>📞 +91 98765 43210 | 📧 hello@naniskitchen.com</p>
         </div>
     </footer>
+   <div class="custom-cursor" id="customCursor"></div>
 </body>
 </html>

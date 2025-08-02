@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's for Lunch Today?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="greeting">Let's see what's for lunch today!</h1>
+        <div class="time-display" id="timeDisplay"></div>
+      </header>
+        <div class="cupboard">
+          <div class="cupboard-frame">
+<div class="shelf" data-shelf="1">
+  <div class="dish" data-dish="dal-chawal" data-meal="lunch,dinner"
+       data-description="Wholesome Indian comfort food made with lentils and rice."
+       data-buy="https://buylink.com/dal-chawal">
+    <img class="dish-content dal-chawal"
+         src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&h=200&fit=crop&crop=center"
+         alt="Dal Chawal" />
+    <span class="dish-name">Dal Chawal</span>
+  </div>
+
+  <div class="dish" data-dish="biryani" data-meal="lunch,dinner"
+       data-description="Aromatic basmati rice cooked with spices, saffron, and meat or veggies."
+       data-buy="https://buylink.com/biryani">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         alt="Biryani" />
+    <span class="dish-name">Biryani</span>
+  </div>
+
+  <div class="dish" data-dish="roti-sabzi" data-meal="lunch,dinner"
+       data-description="Classic Indian meal of flatbread and spiced vegetables."
+       data-buy="https://buylink.com/roti-sabzi">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=200&h=200&fit=crop&crop=center"
+         alt="Roti Sabzi" />
+    <span class="dish-name">Roti Sabzi</span>
+  </div>
+
+  <div class="dish" data-dish="chole-bhature" data-meal="breakfast,lunch"
+       data-description="Deep-fried fluffy bread served with spicy chickpeas."
+       data-buy="https://buylink.com/chole-bhature">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop&crop=center"
+         alt="Chole Bhature" />
+    <span class="dish-name">Chole Bhature</span>
+  </div>
+</div>
+<div class="shelf" data-shelf="2">
+  <div class="dish" data-dish="dosa" data-meal="breakfast,lunch"
+       data-description="Crispy South Indian crepe made from fermented rice batter."
+       data-buy="https://buylink.com/dosa">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1694849789325-914b71ab4075?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9zYXxlbnwwfHwwfHx8MA%3D%3D"
+         alt="Dosa" />
+    <span class="dish-name">Dosa</span>
+  </div>
+
+  <div class="dish" data-dish="idli-sambar" data-meal="breakfast"
+       data-description="Soft rice cakes served with spicy lentil soup."
+       data-buy="https://buylink.com/idli-sambar">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=200&h=200&fit=crop&crop=center"
+         alt="Idli Sambar" />
+    <span class="dish-name">Idli Sambar</span>
+  </div>
+
+  <div class="dish" data-dish="paratha" data-meal="breakfast,lunch"
+       data-description="Stuffed flatbread cooked with ghee or butter."
+       data-buy="https://buylink.com/paratha">
+    <img class="dish-content"
+         src="https://unsplash.com/photos/a-plate-of-food-on-a-black-surface-ZwLHILZ9ML0"
+         alt="Paratha" />
+    <span class="dish-name">Paratha</span>
+  </div>
+
+  <div class="dish" data-dish="upma" data-meal="breakfast,snack"
+       data-description="Savory semolina porridge with vegetables."
+       data-buy="https://buylink.com/upma">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1665660710687-b44c50751054?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         alt="Upma" />
+    <span class="dish-name">Upma</span>
+  </div>
+</div>
+
+<!-- Shelf 3 -->
+<div class="shelf" data-shelf="3">
+  <div class="dish" data-dish="paneer-curry" data-meal="lunch,dinner"
+       data-description="Rich North Indian curry made with cottage cheese."
+       data-buy="https://buylink.com/paneer">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop&crop=center"
+         alt="Paneer Curry" />
+    <span class="dish-name">Paneer Curry</span>
+  </div>
+
+  <div class="dish" data-dish="butter-chicken" data-meal="lunch,dinner"
+       data-description="Creamy tomato gravy with tender chicken pieces."
+       data-buy="https://buylink.com/butter-chicken">
+    <img class="dish-content"
+         src="https://unsplash.com/photos/brown-and-green-dish-on-brown-wooden-bowl-sqcH2q7lkvo"
+         alt="Butter Chicken" />
+    <span class="dish-name">Butter Chicken</span>
+  </div>
+
+  <div class="dish" data-dish="rajma" data-meal="lunch,dinner"
+       data-description="Red kidney beans cooked in a spicy tomato gravy."
+       data-buy="https://buylink.com/rajma">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=200&h=200&fit=crop&crop=center"
+         alt="Rajma" />
+    <span class="dish-name">Rajma</span>
+  </div>
+
+  <div class="dish" data-dish="fish-curry" data-meal="lunch,dinner"
+       data-description="Spicy coastal-style fish curry with tamarind."
+       data-buy="https://buylink.com/fish-curry">
+    <img class="dish-content"
+         src="https://unsplash.com/photos/cooked-food-on-white-ceramic-plate-3oEcy656LIE"
+         alt="Fish Curry" />
+    <span class="dish-name">Fish Curry</span>
+  </div>
+</div>
+
+<!-- Shelf 4 -->
+<div class="shelf" data-shelf="4">
+  <div class="dish" data-dish="samosa" data-meal="snack"
+       data-description="Crispy fried pastry filled with spicy potato mash."
+       data-buy="https://buylink.com/samosa">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200&h=200&fit=crop&crop=center"
+         alt="Samosa" />
+    <span class="dish-name">Samosa</span>
+  </div>
+
+  <div class="dish" data-dish="pakora" data-meal="snack"
+       data-description="Deep-fried fritters made from gram flour and vegetables."
+       data-buy="https://buylink.com/pakora">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=200&h=200&fit=crop&crop=center"
+         alt="Pakora" />
+    <span class="dish-name">Pakora</span>
+  </div>
+
+  <div class="dish" data-dish="vada-pav" data-meal="snack"
+       data-description="Spicy potato fritter served in a pav bun with chutneys."
+       data-buy="https://buylink.com/vada-pav">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=200&h=200&fit=crop&crop=center"
+         alt="Vada Pav" />
+    <span class="dish-name">Vada Pav</span>
+  </div>
+
+  <div class="dish" data-dish="lassi" data-meal="breakfast,snack"
+       data-description="Traditional Punjabi yogurt-based drink, served sweet or salty."
+       data-buy="https://buylink.com/lassi">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1675064982913-067b64880f5f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFzc2l8ZW58MHx8MHx8fDA%3D"
+         alt="Lassi" />
+    <span class="dish-name">Lassi</span>
+  </div>
+</div>
+
+<!-- Shelf 5 -->
+<div class="shelf" data-shelf="5">
+  <div class="dish" data-dish="gulab-jamun" data-meal="snack"
+       data-description="Sweet deep-fried balls soaked in cardamom sugar syrup."
+       data-buy="https://buylink.com/gulab-jamun">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1646578515903-67873a5398f9?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3VsYWIlMjBqYW11bnxlbnwwfHwwfHx8MA%3D%3D"
+         alt="Gulab Jamun" />
+    <span class="dish-name">Gulab Jamun</span>
+  </div>
+
+  <div class="dish" data-dish="kulfi" data-meal="snack"
+       data-description="Frozen dairy dessert flavored with cardamom or saffron."
+       data-buy="https://buylink.com/kulfi">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+         alt="Kulfi" />
+    <span class="dish-name">Kulfi</span>
+  </div>
+
+  <div class="dish" data-dish="jalebi" data-meal="breakfast,snack"
+       data-description="Crispy coiled sweet soaked in sugar syrup."
+       data-buy="https://buylink.com/jalebi">
+    <img class="dish-content"
+         src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=200&fit=crop&crop=center"
+         alt="Jalebi" />
+    <span class="dish-name">Jalebi</span>
+  </div>
+
+  <div class="dish" data-dish="chai" data-meal="breakfast,snack"
+       data-description="Indian spiced tea made with milk, sugar, and masala."
+       data-buy="https://buylink.com/chai">
+    <img class="dish-content"
+         src="https://plus.unsplash.com/premium_photo-1671379526961-1aebb82b317b?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhaXxlbnwwfHwwfHx8MA%3D%3D"
+         alt="Chai" />
+    <span class="dish-name">Chai</span>
+  </div>
+</div>
+          </div>
+        </div>
+         <div id="floatingDishOverlay" class="floating-dish-overlay">
+  <div id="floatingDish" class="floating-dish">
+    <img class="floating-dish-content" />
+    <div class="floating-dish-name"></div>
+    <div class="card-space"></div>
+    <button id="closeDish" class="close-button">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script1.js"></script>
+  </body>
+</html>

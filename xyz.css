@@ -1,0 +1,215 @@
+/** Nani’s Kitchen Home.css */
+
+:root {
+  --warm-orange: #D2691E;
+  --deep-terracotta: #8B4513;
+  --golden-yellow: #DAA520;
+  --cream-white: #FDF5E6;
+  --spice-red: #CD853F;
+  --earth-brown: #A0522D;
+  --turmeric: #E6B800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #800000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #4b0000;
+  position: relative;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+  background: rgba(223, 183, 125, 0.95);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background-color: #ffd700;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: #fff8e1;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: 1rem 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #800000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #a52a2a;
+  min-height: 80vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.top-images img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.hero-image img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 1rem 0;
+}
+
+.title-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.title-text p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #fcd5b0;
+}
+
+.title-text button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: #fff;
+  color: #800000;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.title-text button:hover {
+  background-color: #ffd700;
+  color: #800000;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #4b0000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 80%;
+    height: auto;
+  }
+
+  .title-text h1 {
+    font-size: 2rem;
+  }
+}

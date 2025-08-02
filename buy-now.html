@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Now - Order Your Meal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="buy-now.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Complete Your Order</h1>
+        <p>Almost there! Just a few more details...</p>
+      </header>
+
+      <div class="checkout-container">
+        <div class="bill-section">
+          <div class="bill-card">
+            <h2>Order Summary</h2>
+
+            <div class="selected-item">
+              <img
+                id="itemImage"
+                src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=200&h=200&fit=crop&crop=center"
+                alt="Selected Dish"
+              />
+              <div class="item-details">
+                <h3 id="itemName">Dal Chawal</h3>
+                <p id="itemDescription">
+                  Traditional comfort food with aromatic basmati rice and lentil
+                  curry
+                </p>
+              </div>
+            </div>
+
+            <div class="bill-breakdown">
+              <div class="bill-row">
+                <span>Item Price</span>
+                <span id="itemPrice">₹180.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Packaging Charges</span>
+                <span>₹25.00</span>
+              </div>
+              <div class="bill-row">
+                <span>Delivery Charges</span>
+                <span>₹40.00</span>
+              </div>
+              <div class="bill-row subtotal">
+                <span>Subtotal</span>
+                <span id="subtotal">₹245.00</span>
+              </div>
+              <div class="bill-row tax">
+                <span>CGST (9%)</span>
+                <span id="cgst">₹22.05</span>
+              </div>
+              <div class="bill-row tax">
+                <span>SGST (9%)</span>
+                <span id="sgst">₹22.05</span>
+              </div>
+              <div class="bill-row total">
+                <span>Total Amount</span>
+                <span id="totalAmount">₹289.10</span>
+              </div>
+            </div>
+
+            <div class="savings-badge">
+              <span>You saved ₹30 on this order!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Billing Form Section -->
+        <div class="form-section">
+          <div class="form-card">
+            <h2>Delivery Details</h2>
+
+            <form id="billingForm">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  pattern="[0-9]{10}"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="address">Complete Address *</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  rows="3"
+                  required
+                  placeholder="House/Flat No, Building Name, Street"
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" required />
+                </div>
+                <div class="form-group">
+                  <label for="pincode">Pincode *</label>
+                  <input
+                    type="text"
+                    id="pincode"
+                    name="pincode"
+                    pattern="[0-9]{6}"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="state">State *</label>
+                <select id="state" name="state" required>
+                  <option value="">Select State</option>
+                  <option value="andhra-pradesh">Andhra Pradesh</option>
+                  <option value="delhi">Delhi</option>
+                  <option value="gujarat">Gujarat</option>
+                  <option value="karnataka">Karnataka</option>
+                  <option value="maharashtra">Maharashtra</option>
+                  <option value="punjab">Punjab</option>
+                  <option value="rajasthan">Rajasthan</option>
+                  <option value="tamil-nadu">Tamil Nadu</option>
+                  <option value="uttar-pradesh">Uttar Pradesh</option>
+                  <option value="west-bengal">West Bengal</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="landmark">Landmark (Optional)</label>
+                <input
+                  type="text"
+                  id="landmark"
+                  name="landmark"
+                  placeholder="Near temple, mall, etc."
+                />
+              </div>
+
+              <div class="delivery-options">
+                <h3>Delivery Preference</h3>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input
+                      type="radio"
+                      name="delivery"
+                      value="standard"
+                      checked
+                    />
+                    <span class="radio-custom"></span>
+                    Standard Delivery (45-60 mins) - Free
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="delivery" value="express" />
+                    <span class="radio-custom"></span>
+                    Express Delivery (20-30 mins) - ₹50 extra
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="pay-now-btn">
+                <span class="btn-icon"></span>
+                Pay Now - ₹<span id="finalAmount">289.10</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link">
+        <a href="index.html">← Back to Menu</a>
+      </div>
+    </div>
+
+    <script src="buy-now.js"></script>
+    <!-- Other content (like your delivery form, items, etc.) -->
+
+    <!-- Step 1: Floating Dish Overlay HTML -->
+    <div id="floatingDishOverlay" class="floating-overlay hidden">
+      <div class="floating-content">
+        <button class="close-btn" onclick="closeFloatingDish()">×</button>
+        <img id="floatingDishImage" src="" alt="Dish Image" />
+        <h3 id="floatingDishName"></h3>
+        <p id="floatingDishDescription"></p>
+        <p id="floatingDishPrice" class="price"></p>
+      </div>
+    </div>
+  </body>
+</html>

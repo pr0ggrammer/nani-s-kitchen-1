@@ -1,0 +1,106 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Georgia", serif;
+  background: linear-gradient(to right, #fffaf0, #eec76c);
+}
+
+.back-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.book-cover {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("victoria-shes-COYAmXroY1A-unsplash.jpg") no-repeat center
+    center/cover;
+  position: relative;
+  text-align: center;
+}
+
+.book-cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.title-section {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title-section h1 {
+  font-size: 3.5rem;
+  color: #5a3e36;
+  margin-bottom: 10px;
+}
+
+.title-section .tagline {
+  font-size: 1.2rem;
+  color: #6b4f4f;
+  margin-bottom: 30px;
+}
+
+.title-section button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: #e76f51;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.title-section button:hover {
+  background-color: #d45a3a;
+}
+.dish-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.dish-list li {
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.dish-list a {
+  color: #5a3e36;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dish-list a:hover {
+  color: #e76f51;
+  text-decoration: underline;
+}

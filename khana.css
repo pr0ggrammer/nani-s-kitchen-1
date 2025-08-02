@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fffdf8;
+  color: #333;
+  line-height: 1.6;
+  background: url("victoria-shes-COYAmXroY1A-unsplash.jpg") no-repeat center
+    center/cover;
+}
+
+.recipe-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fffefc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+
+.recipe-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-header img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0 10px;
+  color: #555;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+ul,
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.back-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.back-btn a:hover {
+  color: #005999;
+}
