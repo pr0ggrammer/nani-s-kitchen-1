@@ -1,4 +1,4 @@
-Nani's Kitchen
+***Nani's Kitchen***
 
 **Nani’s Kitchen** is a heartwarming and interactive web application inspired by the comfort and flavor of homemade Indian food. Built with love, it offers users a rich interface to explore traditional dishes, view recipes, and even order ingredients directly to their home.
 
@@ -43,19 +43,7 @@ The app also includes the following visual/interactive elements for a modern exp
 ## Folder Structure
 /nanis-kitchen
 │
-├── index.html               
-├── biryani.html 
-├── dosa.html  
-├── upma.html  
-├── dal-chawal.html  
-├── chole-bhature.html    
-├── fish-curry.html  
-├── rajma.html  
-├── paratha.html  
-├── pakora.html 
-├── samosa.html 
-├── butter-chicken.html  
-├── vada-pav.html             
+├── index.html                       
 ├── recipe-book.html  
 ├── index1.html        
 ├── buy-now.html 
